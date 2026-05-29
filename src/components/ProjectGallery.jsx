@@ -7,7 +7,7 @@ const ProjectGallery = () => {
       description: "A centralized professional data hub built to streamline and showcase user profiles efficiently with a seamless user experience.",
       tech: ["MongoDB", "Express.js", "React", "Node.js"],
       github: "#",
-      live: "#"
+      live: "https://profile-hub-jet.vercel.app/"
     },
     {
       title: "Money Manager",
@@ -15,7 +15,7 @@ const ProjectGallery = () => {
       description: "A comprehensive expense tracking application developed under tight deadlines to manage personal finances and analyze spending habits.",
       tech: ["React", "Node.js", "Express", "Tailwind CSS"],
       github: "#",
-      live: "#"
+      live: "https://money-manager-frontend-mu.vercel.app/"
     },
     {
       title: "Student Chat-Bot System",
