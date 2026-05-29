@@ -1,5 +1,5 @@
 // 1. Import your image here (make sure the extension matches your file!)
-import profilePic from '../assets/profile.jpg'; 
+import profilePic from '../assets/profile.png'; 
 
 const Hero = () => {
   return (
