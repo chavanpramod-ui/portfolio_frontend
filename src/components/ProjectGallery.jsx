@@ -6,7 +6,7 @@ const ProjectGallery = () => {
       type: "Full-Stack Web App",
       description: "A centralized professional data hub built to streamline and showcase user profiles efficiently with a seamless user experience.",
       tech: ["MongoDB", "Express.js", "React", "Node.js"],
-      github: "#",
+      github: "https://github.com/chavanpramod-ui/ProfileHub_Frontend",
       live: "https://profile-hub-jet.vercel.app/"
     },
     {
