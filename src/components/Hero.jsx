@@ -17,7 +17,7 @@ const Hero = () => {
         
         {/* Glowing Gradient Headline */}
         <h1 className="text-5xl md:text-7xl font-bold mb-6 text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-emerald-400">
-          Hi, I'm [Pramod Chavan]
+          Hi, I'm Pramod Chavan
         </h1>
         
         {/* Introduction Subtitle */}
