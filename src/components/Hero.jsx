@@ -9,33 +9,51 @@ const Hero = () => {
           <div className="xl:max-w-3xl">
             <p className="text-sm uppercase tracking-[0.35em] text-[var(--muted)]">Profile</p>
             <p className="mt-4 text-lg leading-8 text-[var(--muted)] max-w-3xl">
-              Final-year Computer Science and Engineering student and full-stack developer with experience building scalable MERN applications, Java systems, and polished user interfaces.
+              Computer Science Engineering student and full-stack developer with a demonstrated ability to design and deliver scalable web
+applications using the MERN stack. Experienced in building end-to-end features, complex business logic, and real-time
+dashboards. Highly skilled in Data Structures and Algorithms with a passion for clean code architecture and solving real-world
+software engineering challenges.
+
             </p>
 
             <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 text-[var(--text)]">
-              <div className="rounded-3xl bg-[var(--surface-2)] p-5 border border-[var(--border)]">
+              <div className="rounded-3xl bg-[var(--surface-2)] p-5 border border-[var(--border)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
                 <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">Location</p>
-                <p className="mt-3 font-semibold">Nashik, Maharashtra</p>
+                <p className="mt-3 font-semibold"> Mumbai, Maharashtra</p>
               </div>
-              <div className="rounded-3xl bg-[var(--surface-2)] p-5 border border-[var(--border)]">
+              <div className="rounded-3xl bg-[var(--surface-2)] p-5 border border-[var(--border)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
                 <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">Availability</p>
                 <p className="mt-3 font-semibold">Open to internships and junior full-stack roles</p>
               </div>
-              <div className="rounded-3xl bg-[var(--surface-2)] p-5 border border-[var(--border)]">
+              <div className="rounded-3xl bg-[var(--surface-2)] p-5 border border-[var(--border)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
                 <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">Phone</p>
                 <p className="mt-3 font-semibold">(+91) 8788120892</p>
               </div>
-              <div className="rounded-3xl bg-[var(--surface-2)] p-5 border border-[var(--border)]">
+              <div className="rounded-3xl bg-[var(--surface-2)] p-5 border border-[var(--border)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
                 <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">Email</p>
                 <p className="mt-3 font-semibold">pramodc431510@gmail.com</p>
               </div>
-              <div className="rounded-3xl bg-[var(--surface-2)] p-5 border border-[var(--border)]">
+              <div className="rounded-3xl bg-[var(--surface-2)] p-5 border border-[var(--border)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
                 <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">LinkedIn</p>
-                <p className="mt-3 font-semibold">linkedin.com/in/pramod-chavan</p>
+                <a
+                  href="https://linkedin.com/in/pramod-chavan"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="mt-3 block font-semibold text-[var(--text)] hover:text-[var(--accent)] transition-colors"
+                >
+                  linkedin.com/in/pramod-chavan
+                </a>
               </div>
-              <div className="rounded-3xl bg-[var(--surface-2)] p-5 border border-[var(--border)]">
+              <div className="rounded-3xl bg-[var(--surface-2)] p-5 border border-[var(--border)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
                 <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">GitHub</p>
-                <p className="mt-3 font-semibold">github.com/chavanpramod-ui</p>
+                <a
+                  href="https://github.com/chavanpramod-ui"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="mt-3 block font-semibold text-[var(--text)] hover:text-[var(--accent)] transition-colors"
+                >
+                  github.com/chavanpramod-ui
+                </a>
               </div>
             </div>
           </div>

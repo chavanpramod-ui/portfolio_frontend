@@ -1,31 +1,37 @@
 @import "tailwindcss";
 
 :root {
+  /* Dark (navy) theme - inspired by the provided dashboard */
   color-scheme: dark;
-  --page-bg: #050816;
-  --surface: #0d1323;
-  --surface-2: #131a2d;
-  --text: #e2e8f0;
-  --muted: #94a3b8;
-  --border: #334155;
-  --accent: #8b5cf6;
-  --accent-2: #06b6d4;
-  --gradient-start: #8b5cf6;
-  --gradient-end: #06b6d4;
+  --page-bg: #071428; /* deep navy background */
+  --surface: #0f2430; /* card surface */
+  --surface-2: #122933; /* slightly lighter surface for nested cards */
+  --text: #d7eef2; /* soft off-white text */
+  --muted: #9fb6bf; /* muted descriptive text */
+  --border: rgba(255,255,255,0.03); /* subtle border */
+  --accent: #35d6c4; /* mint / teal primary accent */
+  --accent-2: #2fb7e6; /* cyan secondary accent */
+  --gradient-start: #35d6c4;
+  --gradient-end: #2fb7e6;
+  --nav-bg: linear-gradient(180deg, rgba(11,20,32,0.6), rgba(11,20,32,0.45));
+  --nav-accent: rgba(53,214,196,0.12);
 }
 
 .light {
+  /* Light theme counterpart */
   color-scheme: light;
-  --page-bg: #f8fafc;
-  --surface: #ffffff;
-  --surface-2: #e2e8f0;
-  --text: #0f172a;
-  --muted: #64748b;
-  --border: #cbd5e1;
-  --accent: #7c3aed;
-  --accent-2: #0ea5e9;
-  --gradient-start: #7c3aed;
-  --gradient-end: #0ea5e9;
+  --page-bg: #dbf6ea; /* pale mint background like the screenshot */
+  --surface: #ffffff; /* white cards */
+  --surface-2: #f3fbf8; /* very light mint for nested cards */
+  --text: #0f5560; /* deep teal text */
+  --muted: #4aa79f; /* muted teal for labels */
+  --border: #d6efe8; /* soft mint border */
+  --accent: #3fcdb8; /* mint button */
+  --accent-2: #2fb7e6; /* cyan secondary accent */
+  --gradient-start: #3fcdb8;
+  --gradient-end: #2fb7e6;
+  --nav-bg: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));
+  --nav-accent: rgba(63,205,184,0.12);
 }
 
 * {
@@ -35,6 +41,10 @@
 html,
 body {
   min-height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -75,8 +85,38 @@ a {
   animation: fadeInUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+.animate-slide-down {
+  animation: slideDownFade 0.65s ease-out both;
+}
+
+.pop-in {
+  animation: popIn 0.55s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
 .float-slow {
   animation: floatUp 4s ease-in-out infinite;
+}
+
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .glow-border {

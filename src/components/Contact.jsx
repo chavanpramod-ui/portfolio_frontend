@@ -42,7 +42,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-20 bg-[var(--surface)] text-[var(--text)] px-6">
+    <section id="contact" className="py-20 bg-[var(--surface)] text-[var(--text)] px-6 fade-in-up">
       <div className="max-w-6xl mx-auto">
         
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">
@@ -52,7 +52,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           
           {/* Left Side: Contact Information */}
-          <div className="bg-[var(--surface-2)] p-8 md:p-12 rounded-2xl border border-[var(--border)] shadow-lg">
+          <div className="bg-[var(--surface-2)] p-8 md:p-12 rounded-2xl border border-[var(--border)] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_30px_90px_rgba(0,0,0,0.08)]">
             <h3 className="text-2xl font-bold mb-6 text-[var(--text)]">Let's Connect</h3>
             <p className="text-[var(--muted)] mb-8 leading-relaxed">
               Whether you have a question about my MERN stack projects, a career opportunity, or just want to say hi, my inbox is always open. I'll try my best to get back to you!
@@ -71,7 +71,7 @@ const Contact = () => {
           </div>
 
           {/* Right Side: The Form */}
-          <form onSubmit={handleSubmit} className="bg-[var(--surface-2)] p-8 md:p-12 rounded-2xl border border-[var(--border)] shadow-lg flex flex-col gap-6">
+          <form onSubmit={handleSubmit} className="bg-[var(--surface-2)] p-8 md:p-12 rounded-2xl border border-[var(--border)] shadow-lg flex flex-col gap-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_30px_90px_rgba(0,0,0,0.08)]">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-[var(--muted)] mb-2">Name</label>
               <input 
