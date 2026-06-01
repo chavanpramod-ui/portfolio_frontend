@@ -11,10 +11,10 @@ const Education = () => {
     {
       id: 2,
       degree: "Diploma in Computer Engineering",
-      institution: "Government Polytechnic Jintur India",
+      institution: "Government Polytechnic Jintur, India",
       duration: "June 2020 - June 2023",
       description: "Completed foundational coursework with a strong emphasis on mathematics, physics, and introductory computer science.",
-      highlights: ["Java (programing Language)","Pythone (programing Language)","Data Structures & Algorithms (Java)","Object-Oriented Analysis & Design (OOAD)"]
+      highlights: ["Java", "Python", "Data Structures & Algorithms (Java)", "Object-Oriented Analysis & Design (OOAD)"]
     }
   ];
 

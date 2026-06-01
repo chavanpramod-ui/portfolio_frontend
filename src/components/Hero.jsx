@@ -3,42 +3,54 @@ import profilePic from '../assets/profile.png';
 
 const Hero = () => {
   return (
-    <section id="hero" className="flex flex-col items-center justify-center min-h-screen bg-[var(--surface)] text-[var(--text)] px-6 fade-in-up">
-      <div className="max-w-3xl text-center flex flex-col items-center">
-        
-        {/* Profile Photo with Glowing Border */}
-        <div className="mb-8 float-slow rounded-full glow-border">
-          <img 
-            src={profilePic} 
-            alt="Profile" 
-            className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover"
-          />
-        </div>
-        
-        {/* Glowing Gradient Headline */}
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 gradient-text">
-          Hi, I'm Pramod Chavan
-        </h1>
-        
-        {/* Introduction Subtitle */}
-        <p className="text-xl md:text-2xl text-[var(--muted)] mb-8 leading-relaxed max-w-3xl">
-          Computer Science Engineering student and full-stack developer with a demonstrated ability to design and deliver scalable web
-applications using the MERN stack. Experienced in building end-to-end features, complex business logic, and real-time
-dashboards. Highly skilled in Data Structures and Algorithms with a passion for clean code architecture and solving real-world
-software engineering challenges.
+    <section id="hero" className="fade-in-up">
+      <div className="bg-[var(--surface)] border border-[var(--border)] rounded-3xl p-10 shadow-xl">
+        <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-8">
+          <div className="max-w-3xl">
+            <p className="text-sm uppercase tracking-[0.35em] text-[var(--muted)]">Resume</p>
+            <h1 className="text-5xl md:text-6xl font-extrabold text-[var(--text)] mt-4">Pramod Chavan</h1>
+            <p className="mt-4 text-[var(--muted)] leading-relaxed text-lg">
+              Final-year Computer Science and Engineering student and full-stack developer specializing in MERN applications, Java systems, and polished user interfaces.
+            </p>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface-2)] p-5">
+                <p className="text-sm uppercase tracking-[0.3em] text-[var(--muted)]">Location</p>
+                <p className="mt-2 text-[var(--text)]">Nashik, Maharashtra</p>
+              </div>
+              <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface-2)] p-5">
+                <p className="text-sm uppercase tracking-[0.3em] text-[var(--muted)]">Availability</p>
+                <p className="mt-2 text-[var(--text)]">Open to internships and junior full-stack roles</p>
+              </div>
+            </div>
+          </div>
 
-        </p>
-        
-        {/* Call to Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#projects" className="px-8 py-3 bg-[var(--accent)] hover:brightness-110 text-white rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg shadow-[0_0_30px_rgba(139,92,246,0.35)]">
-            View Projects
-          </a>
-          <a href="#contact" className="px-8 py-3 bg-[var(--surface-2)] hover:bg-[var(--surface)] border border-[var(--border)] rounded-full font-semibold transition-all transform hover:scale-105 text-[var(--text)]">
-            Contact Me
-          </a>
+          <div className="mx-auto xl:mx-0 rounded-full overflow-hidden border border-[var(--border)] w-44 h-44 shadow-lg">
+            <img
+              src={profilePic}
+              alt="Profile"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
 
+        <div className="mt-10 grid gap-4 md:grid-cols-2">
+          <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface-2)] p-6">
+            <p className="text-sm uppercase tracking-[0.3em] text-[var(--muted)]">Phone</p>
+            <p className="mt-2 text-[var(--text)]">(+91) 8788120892</p>
+          </div>
+          <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface-2)] p-6">
+            <p className="text-sm uppercase tracking-[0.3em] text-[var(--muted)]">Email</p>
+            <p className="mt-2 text-[var(--text)]">pramodc431510@gmail.com</p>
+          </div>
+          <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface-2)] p-6">
+            <p className="text-sm uppercase tracking-[0.3em] text-[var(--muted)]">LinkedIn</p>
+            <p className="mt-2 text-[var(--accent)]">linkedin.com/in/pramod-chavan</p>
+          </div>
+          <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface-2)] p-6">
+            <p className="text-sm uppercase tracking-[0.3em] text-[var(--muted)]">GitHub</p>
+            <p className="mt-2 text-[var(--accent)]">github.com/chavanpramod-ui</p>
+          </div>
+        </div>
       </div>
     </section>
   );

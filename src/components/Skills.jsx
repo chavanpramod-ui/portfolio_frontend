@@ -15,39 +15,21 @@ const Skills = () => {
   ];
 
   return (
-    <section className="py-20 bg-[var(--surface)] text-[var(--text)] px-6">
-      <div className="max-w-5xl mx-auto">
-        
-        {/* Section Header */}
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-transparent bg-clip-text bg-linear-to-r from-emerald-400 to-cyan-400">
-         My Skills
-        </h2>
+    <section id="skills" className="py-20 fade-in-up">
+      <div className="bg-[var(--surface)] border border-[var(--border)] rounded-3xl p-10 shadow-xl">
+        <div className="mb-10">
+          <p className="text-sm uppercase tracking-[0.35em] text-[var(--muted)]">Technical Skills</p>
+          <h2 className="text-4xl md:text-5xl font-bold mt-4 gradient-text">Skill Summary</h2>
+        </div>
 
-        {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="space-y-6">
           {skillCategories.map((category, index) => (
-            <div 
-              key={index} 
-              className="bg-[var(--surface-2)] p-8 rounded-2xl border border-[var(--border)] shadow-lg hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-2"
-            >
-              <h3 className="text-2xl font-semibold mb-6 text-[var(--text)] border-b border-[var(--border)] pb-3">
-                {category.title}
-              </h3>
-              <ul className="space-y-3 flex flex-col">
-                {category.skills.map((skill, skillIndex) => (
-                  <li 
-                    key={skillIndex} 
-                    className="flex items-center text-[var(--muted)] hover:text-[var(--accent-2)] transition-colors"
-                  >
-                    <span className="mr-3 text-emerald-500">▹</span>
-                    {skill}
-                  </li>
-                ))}
-              </ul>
+            <div key={index} className="rounded-3xl border border-[var(--border)] bg-[var(--surface-2)] p-6">
+              <h3 className="text-xl font-semibold text-[var(--text)] mb-3">{category.title}</h3>
+              <p className="text-[var(--muted)] leading-relaxed">{category.skills.join(' • ')}</p>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
