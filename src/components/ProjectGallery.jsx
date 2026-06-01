@@ -36,10 +36,10 @@ const ProjectGallery = () => {
   ];
 
   return (
-    <section className="py-20 bg-[var(--page-bg)] text-[var(--text)] px-6">
+    <section id="projects" className="py-20 bg-[var(--page-bg)] text-[var(--text)] px-6 fade-in-up">
       <div className="max-w-6xl mx-auto">
         
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-emerald-400">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">
          My Projects
         </h2>
         
@@ -48,7 +48,7 @@ const ProjectGallery = () => {
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-2 shadow-lg group"
+              className="bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] hover:border-[var(--accent)]/50 transition-all duration-300 hover:-translate-y-2 shadow-lg group fade-in-up"
             >
               {/* Image Placeholder (You can replace this with an actual <img> tag later) */}
               <div className="h-48 bg-[var(--surface-2)] flex items-center justify-center group-hover:bg-[var(--surface)] transition-colors">
@@ -57,7 +57,7 @@ const ProjectGallery = () => {
               
               {/* Card Content */}
               <div className="p-8">
-                <span className="text-[var(--accent-2)] text-sm font-semibold tracking-wider uppercase mb-2 block">
+                <span className="text-[var(--accent)] text-sm font-semibold tracking-wider uppercase mb-2 block">
                   {project.type}
                 </span>
                 <h3 className="text-2xl font-bold mb-3 text-[var(--text)]">{project.title}</h3>

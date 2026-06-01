@@ -19,10 +19,10 @@ const Education = () => {
   ];
 
   return (
-    <section className="py-20 bg-[var(--surface-2)] text-[var(--text)] px-6 border-t border-[var(--border)]">
+    <section id="education" className="py-20 bg-[var(--surface-2)] text-[var(--text)] px-6 border-t border-[var(--border)] fade-in-up">
       <div className="max-w-4xl mx-auto">
         
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-emerald-400">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">
           Education & Academic Journey
         </h2>
 
@@ -33,14 +33,14 @@ const Education = () => {
             <div key={item.id} className="relative pl-8 md:pl-12">
               
               {/* Glowing Timeline Dot */}
-              <div className="absolute -left-2.25 top-1.5 w-4 h-4 bg-[var(--surface)] border-2 border-[var(--accent-2)] rounded-full shadow-[0_0_10px_rgba(16,185,129,0.8)]"></div>
+              <div className="absolute -left-2.25 top-1.5 w-4 h-4 bg-[var(--surface)] border-2 border-[var(--accent)] rounded-full shadow-[0_0_10px_rgba(139,92,246,0.3)]"></div>
               
               {/* Content Card */}
-              <div className="bg-[var(--surface)] p-6 md:p-8 rounded-2xl border border-[var(--border)] shadow-lg hover:border-[var(--accent-2)]/30 transition-colors duration-300">
+              <div className="bg-[var(--surface)] p-6 md:p-8 rounded-2xl border border-[var(--border)] shadow-lg hover:border-[var(--accent)]/30 transition-colors duration-300">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                   <div>
                     <h3 className="text-2xl font-bold text-[var(--text)]">{item.degree}</h3>
-                    <h4 className="text-lg text-[var(--accent-2)] font-medium mt-1">{item.institution}</h4>
+                    <h4 className="text-lg text-[var(--accent)] font-medium mt-1">{item.institution}</h4>
                   </div>
                   <span className="mt-2 md:mt-0 px-4 py-1 bg-[var(--surface)] border border-[var(--border)] rounded-full text-sm text-[var(--muted)] font-semibold inline-block w-max">
                     {item.duration}

@@ -45,8 +45,8 @@ const Contact = () => {
     <section className="py-20 bg-[var(--surface)] text-[var(--text)] px-6">
       <div className="max-w-6xl mx-auto">
         
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-emerald-400">
-          Contact me
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">
+          Contact Me
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -118,7 +118,7 @@ const Contact = () => {
             <button 
               type="submit" 
               disabled={status === 'sending'}
-              className="mt-4 w-full py-4 bg-linear-to-r from-blue-600 to-emerald-500 hover:from-blue-500 hover:to-emerald-400 disabled:opacity-50 text-white rounded-lg font-bold text-lg transition-all transform hover:scale-[1.02] shadow-lg"
+              className="mt-4 w-full py-4 bg-[var(--accent)] hover:bg-[var(--accent-2)] disabled:opacity-50 text-white rounded-lg font-bold text-lg transition-all transform hover:-translate-y-0.5 hover:scale-[1.02] shadow-lg"
             >
               {status === 'sending' ? 'Sending...' : 'Send Message'}
             </button>

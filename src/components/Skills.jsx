@@ -2,15 +2,15 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Frontend Development",
-      skills: ["React.js", "JavaScript (ES6+)", "HTML5 & CSS3", "Tailwind CSS", "jQuery"]
+      skills: ["React.js", "JavaScript (ES6+)", "HTML5 & CSS3", "Tailwind CSS", "Bootstrap"]
     },
     {
-      title: "Backend & Database",
-      skills: ["Node.js", "Express.js", "MongoDB", "PHP", "RESTful APIs"]
+      title: "Backend & Cloud",
+      skills: ["Node.js", "Express.js", "MongoDB", "MySQL", "RESTful APIs"]
     },
     {
-      title: "Core Programming & Concepts",
-      skills: ["Java","Python", "Data Structures & Algorithms", "Object-Oriented Design", "Information Security"]
+      title: "Programming & Tools",
+      skills: ["Java", "Python", "Data Structures & Algorithms", "Git & GitHub", "VS Code / Postman"]
     }
   ];
 
