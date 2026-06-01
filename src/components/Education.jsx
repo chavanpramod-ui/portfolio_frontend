@@ -4,7 +4,7 @@ const Education = () => {
       id: 1,
       degree: "B.Tech in Computer Science and Engineering (Final Year)",
       institution: "Sandip University, Nashik",
-      duration: "Expected Graduation: 2026",
+      duration: "June 2023 - June 2026",
       description: "Specializing in software engineering and scalable system architecture. Actively applying theoretical knowledge to build comprehensive startup prototypes and full-stack web applications.",
       highlights: ["Data Structures & Algorithms (Java)", "Object-Oriented Analysis & Design (OOAD)", "MERN Stack Development"]
     },
@@ -12,7 +12,7 @@ const Education = () => {
       id: 2,
       degree: "Diploma in Computer Engineering",
       institution: "Government Polytechnic Jintur India",
-      duration: "june 2020 - june 2023",
+      duration: "June 2020 - June 2023",
       description: "Completed foundational coursework with a strong emphasis on mathematics, physics, and introductory computer science.",
       highlights: ["Java (programing Language)","Pythone (programing Language)","Data Structures & Algorithms (Java)","Object-Oriented Analysis & Design (OOAD)"]
     }
