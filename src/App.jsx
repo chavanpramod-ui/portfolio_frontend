@@ -8,7 +8,7 @@ import ProjectGallery from './components/ProjectGallery';
 import Contact from './components/Contact';
 
 function App() {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('light');
 
   useEffect(() => {
     document.documentElement.classList.toggle('light', theme === 'light');

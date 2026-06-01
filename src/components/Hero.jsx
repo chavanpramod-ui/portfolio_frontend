@@ -4,51 +4,48 @@ import profilePic from '../assets/profile.png';
 const Hero = () => {
   return (
     <section id="hero" className="fade-in-up">
-      <div className="bg-[var(--surface)] border border-[var(--border)] rounded-3xl p-10 shadow-xl">
-        <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-8">
-          <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.35em] text-[var(--muted)]">Resume</p>
-            <h1 className="text-5xl md:text-6xl font-extrabold text-[var(--text)] mt-4">Pramod Chavan</h1>
-            <p className="mt-4 text-[var(--muted)] leading-relaxed text-lg">
-              Final-year Computer Science and Engineering student and full-stack developer specializing in MERN applications, Java systems, and polished user interfaces.
+      <div className="bg-[var(--surface)] border border-[var(--border)] rounded-[2.5rem] p-10 shadow-xl max-w-6xl mx-auto">
+        <div className="flex flex-col xl:flex-row xl:items-start xl:justify-between gap-10">
+          <div className="xl:max-w-3xl">
+            <p className="text-sm uppercase tracking-[0.35em] text-[var(--muted)]">Profile</p>
+            <p className="mt-4 text-lg leading-8 text-[var(--muted)] max-w-3xl">
+              Final-year Computer Science and Engineering student and full-stack developer with experience building scalable MERN applications, Java systems, and polished user interfaces.
             </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface-2)] p-5">
-                <p className="text-sm uppercase tracking-[0.3em] text-[var(--muted)]">Location</p>
-                <p className="mt-2 text-[var(--text)]">Nashik, Maharashtra</p>
+
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 text-[var(--text)]">
+              <div className="rounded-3xl bg-[var(--surface-2)] p-5 border border-[var(--border)]">
+                <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">Location</p>
+                <p className="mt-3 font-semibold">Nashik, Maharashtra</p>
               </div>
-              <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface-2)] p-5">
-                <p className="text-sm uppercase tracking-[0.3em] text-[var(--muted)]">Availability</p>
-                <p className="mt-2 text-[var(--text)]">Open to internships and junior full-stack roles</p>
+              <div className="rounded-3xl bg-[var(--surface-2)] p-5 border border-[var(--border)]">
+                <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">Availability</p>
+                <p className="mt-3 font-semibold">Open to internships and junior full-stack roles</p>
+              </div>
+              <div className="rounded-3xl bg-[var(--surface-2)] p-5 border border-[var(--border)]">
+                <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">Phone</p>
+                <p className="mt-3 font-semibold">(+91) 8788120892</p>
+              </div>
+              <div className="rounded-3xl bg-[var(--surface-2)] p-5 border border-[var(--border)]">
+                <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">Email</p>
+                <p className="mt-3 font-semibold">pramodc431510@gmail.com</p>
+              </div>
+              <div className="rounded-3xl bg-[var(--surface-2)] p-5 border border-[var(--border)]">
+                <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">LinkedIn</p>
+                <p className="mt-3 font-semibold">linkedin.com/in/pramod-chavan</p>
+              </div>
+              <div className="rounded-3xl bg-[var(--surface-2)] p-5 border border-[var(--border)]">
+                <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">GitHub</p>
+                <p className="mt-3 font-semibold">github.com/chavanpramod-ui</p>
               </div>
             </div>
           </div>
 
-          <div className="mx-auto xl:mx-0 rounded-full overflow-hidden border border-[var(--border)] w-44 h-44 shadow-lg">
+          <div className="flex items-center justify-center rounded-full bg-[var(--surface-2)] p-5 shadow-[0_20px_60px_rgba(0,0,0,0.12)]">
             <img
               src={profilePic}
               alt="Profile"
-              className="w-full h-full object-cover"
+              className="h-48 w-48 rounded-full object-cover"
             />
-          </div>
-        </div>
-
-        <div className="mt-10 grid gap-4 md:grid-cols-2">
-          <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface-2)] p-6">
-            <p className="text-sm uppercase tracking-[0.3em] text-[var(--muted)]">Phone</p>
-            <p className="mt-2 text-[var(--text)]">(+91) 8788120892</p>
-          </div>
-          <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface-2)] p-6">
-            <p className="text-sm uppercase tracking-[0.3em] text-[var(--muted)]">Email</p>
-            <p className="mt-2 text-[var(--text)]">pramodc431510@gmail.com</p>
-          </div>
-          <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface-2)] p-6">
-            <p className="text-sm uppercase tracking-[0.3em] text-[var(--muted)]">LinkedIn</p>
-            <p className="mt-2 text-[var(--accent)]">linkedin.com/in/pramod-chavan</p>
-          </div>
-          <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface-2)] p-6">
-            <p className="text-sm uppercase tracking-[0.3em] text-[var(--muted)]">GitHub</p>
-            <p className="mt-2 text-[var(--accent)]">github.com/chavanpramod-ui</p>
           </div>
         </div>
       </div>
