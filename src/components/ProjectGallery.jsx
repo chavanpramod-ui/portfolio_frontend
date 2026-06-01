@@ -36,7 +36,7 @@ const ProjectGallery = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-900 text-white px-6">
+    <section className="py-20 bg-[var(--page-bg)] text-[var(--text)] px-6">
       <div className="max-w-6xl mx-auto">
         
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-emerald-400">
@@ -48,20 +48,20 @@ const ProjectGallery = () => {
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-2 shadow-lg group"
+              className="bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--border)] hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-2 shadow-lg group"
             >
               {/* Image Placeholder (You can replace this with an actual <img> tag later) */}
-              <div className="h-48 bg-gray-700 flex items-center justify-center group-hover:bg-gray-600 transition-colors">
-                 <span className="text-gray-400 font-medium text-lg">{project.title} Preview</span>
+              <div className="h-48 bg-[var(--surface-2)] flex items-center justify-center group-hover:bg-[var(--surface)] transition-colors">
+                 <span className="text-[var(--muted)] font-medium text-lg">{project.title} Preview</span>
               </div>
               
               {/* Card Content */}
               <div className="p-8">
-                <span className="text-emerald-400 text-sm font-semibold tracking-wider uppercase mb-2 block">
+                <span className="text-[var(--accent-2)] text-sm font-semibold tracking-wider uppercase mb-2 block">
                   {project.type}
                 </span>
-                <h3 className="text-2xl font-bold mb-3 text-gray-100">{project.title}</h3>
-                <p className="text-gray-400 mb-6 leading-relaxed">
+                <h3 className="text-2xl font-bold mb-3 text-[var(--text)]">{project.title}</h3>
+                <p className="text-[var(--muted)] mb-6 leading-relaxed">
                   {project.description}
                 </p>
                 
@@ -70,7 +70,7 @@ const ProjectGallery = () => {
                   {project.tech.map((tech, i) => (
                     <span 
                       key={i} 
-                      className="px-3 py-1 bg-gray-900 border border-gray-700 rounded-full text-xs font-medium text-gray-300"
+                      className="px-3 py-1 bg-[var(--surface)] border border-[var(--border)] rounded-full text-xs font-medium text-[var(--text)]"
                     >
                       {tech}
                     </span>
@@ -79,10 +79,10 @@ const ProjectGallery = () => {
                 
                 {/* Action Buttons */}
                 <div className="flex gap-4">
-                  <a href={project.github} className="flex-1 text-center py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm font-semibold transition-colors">
+                  <a href={project.github} className="flex-1 text-center py-2 bg-[var(--surface-2)] hover:bg-[var(--surface)] rounded-lg text-sm font-semibold text-[var(--text)] transition-colors">
                     GitHub
                   </a>
-                  <a href={project.live} className="flex-1 text-center py-2 bg-blue-600 hover:bg-blue-500 rounded-lg text-sm font-semibold transition-colors">
+                  <a href={project.live} className="flex-1 text-center py-2 bg-[var(--accent)] hover:brightness-110 rounded-lg text-sm font-semibold text-white transition-colors">
                     Live Demo
                   </a>
                 </div>

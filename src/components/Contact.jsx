@@ -42,7 +42,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-800 text-white px-6">
+    <section className="py-20 bg-[var(--surface)] text-[var(--text)] px-6">
       <div className="max-w-6xl mx-auto">
         
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-emerald-400">
@@ -52,28 +52,28 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           
           {/* Left Side: Contact Information */}
-          <div className="bg-gray-900 p-8 md:p-12 rounded-2xl border border-gray-700 shadow-lg">
-            <h3 className="text-2xl font-bold mb-6 text-gray-100">Let's Connect</h3>
-            <p className="text-gray-400 mb-8 leading-relaxed">
+          <div className="bg-[var(--surface-2)] p-8 md:p-12 rounded-2xl border border-[var(--border)] shadow-lg">
+            <h3 className="text-2xl font-bold mb-6 text-[var(--text)]">Let's Connect</h3>
+            <p className="text-[var(--muted)] mb-8 leading-relaxed">
               Whether you have a question about my MERN stack projects, a career opportunity, or just want to say hi, my inbox is always open. I'll try my best to get back to you!
             </p>
             
             <div className="space-y-6">
-              <div className="flex items-center text-gray-300">
-                <span className="mr-4 text-emerald-500 text-2xl">📍</span>
+              <div className="flex items-center text-[var(--muted)]">
+                <span className="mr-4 text-[var(--accent-2)] text-2xl">📍</span>
                 <span className="text-lg">Nashik, Maharashtra</span>
               </div>
-              <div className="flex items-center text-gray-300">
-                <span className="mr-4 text-blue-500 text-2xl">📧</span>
+              <div className="flex items-center text-[var(--muted)]">
+                <span className="mr-4 text-[var(--accent)] text-2xl">📧</span>
                 <span className="text-lg">pramodc431510@gmail.com</span>
               </div>
             </div>
           </div>
 
           {/* Right Side: The Form */}
-          <form onSubmit={handleSubmit} className="bg-gray-900 p-8 md:p-12 rounded-2xl border border-gray-700 shadow-lg flex flex-col gap-6">
+          <form onSubmit={handleSubmit} className="bg-[var(--surface-2)] p-8 md:p-12 rounded-2xl border border-[var(--border)] shadow-lg flex flex-col gap-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">Name</label>
+              <label htmlFor="name" className="block text-sm font-medium text-[var(--muted)] mb-2">Name</label>
               <input 
                 type="text" 
                 id="name"
@@ -81,25 +81,25 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 placeholder="your name"
-                className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                className="w-full bg-[var(--surface)] border border-[var(--border)] rounded-lg px-4 py-3 text-[var(--text)] focus:outline-none focus:border-[var(--accent)] transition-colors"
               />
             </div>
             
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">Email</label>
+              <label htmlFor="email" className="block text-sm font-medium text-[var(--muted)] mb-2">Email</label>
               <input 
                 type="email" 
-                id="email"
+                id="email" 
                 value={formData.email}
                 onChange={handleChange}
                 required
                 placeholder="example12@gmail.com"
-                className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                className="w-full bg-[var(--surface)] border border-[var(--border)] rounded-lg px-4 py-3 text-[var(--text)] focus:outline-none focus:border-[var(--accent)] transition-colors"
               />
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">Message</label>
+              <label htmlFor="message" className="block text-sm font-medium text-[var(--muted)] mb-2">Message</label>
               <textarea 
                 id="message"
                 rows="4"
@@ -107,7 +107,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 placeholder="How can we work together?"
-                className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                className="w-full bg-[var(--surface)] border border-[var(--border)] rounded-lg px-4 py-3 text-[var(--text)] focus:outline-none focus:border-[var(--accent)] transition-colors resize-none"
               ></textarea>
             </div>
 

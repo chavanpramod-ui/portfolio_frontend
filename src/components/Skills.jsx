@@ -15,7 +15,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-800 text-white px-6">
+    <section className="py-20 bg-[var(--surface)] text-[var(--text)] px-6">
       <div className="max-w-5xl mx-auto">
         
         {/* Section Header */}
@@ -28,16 +28,16 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div 
               key={index} 
-              className="bg-gray-900 p-8 rounded-2xl border border-gray-700 shadow-lg hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-2"
+              className="bg-[var(--surface-2)] p-8 rounded-2xl border border-[var(--border)] shadow-lg hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-2"
             >
-              <h3 className="text-2xl font-semibold mb-6 text-gray-200 border-b border-gray-700 pb-3">
+              <h3 className="text-2xl font-semibold mb-6 text-[var(--text)] border-b border-[var(--border)] pb-3">
                 {category.title}
               </h3>
               <ul className="space-y-3 flex flex-col">
                 {category.skills.map((skill, skillIndex) => (
                   <li 
                     key={skillIndex} 
-                    className="flex items-center text-gray-400 hover:text-emerald-400 transition-colors"
+                    className="flex items-center text-[var(--muted)] hover:text-[var(--accent-2)] transition-colors"
                   >
                     <span className="mr-3 text-emerald-500">▹</span>
                     {skill}

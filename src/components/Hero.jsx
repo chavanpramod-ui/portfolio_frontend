@@ -3,7 +3,7 @@ import profilePic from '../assets/profile.png';
 
 const Hero = () => {
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white px-6">
+    <section className="flex flex-col items-center justify-center min-h-screen bg-[var(--surface)] text-[var(--text)] px-6">
       <div className="max-w-3xl text-center flex flex-col items-center">
         
         {/* Profile Photo with Glowing Border */}
@@ -21,17 +21,17 @@ const Hero = () => {
         </h1>
         
         {/* Introduction Subtitle */}
-        <p className="text-xl md:text-2xl text-gray-400 mb-8 leading-relaxed">
+        <p className="text-xl md:text-2xl text-[var(--muted)] mb-8 leading-relaxed">
           I'm a final-year Computer Science and Engineering student at Sandip University. 
           I specialize in building responsive, high-performance web applications using the MERN stack and Java.
         </p>
         
         {/* Call to Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg shadow-blue-500/30">
+          <button className="px-8 py-3 bg-[var(--accent)] hover:brightness-110 text-white rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg shadow-[0_0_30px_rgba(56,189,248,0.35)]">
             View My Projects
           </button>
-          <button className="px-8 py-3 bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-full font-semibold transition-all transform hover:scale-105">
+          <button className="px-8 py-3 bg-[var(--surface-2)] hover:bg-[var(--surface)] border border-[var(--border)] rounded-full font-semibold transition-all transform hover:scale-105 text-[var(--text)]">
             Contact Me
           </button>
         </div>
