@@ -6,7 +6,7 @@ const Hero = () => {
     <section id="hero" className="fade-in-up">
       <div className="bg-[var(--surface)] border border-[var(--border)] rounded-[2.5rem] p-10 shadow-xl max-w-6xl mx-auto">
         <div className="flex flex-col xl:flex-row xl:items-start xl:justify-between gap-10">
-          <div className="xl:max-w-3xl">
+          <div className="order-last xl:order-first xl:max-w-3xl">
             <p className="text-sm uppercase tracking-[0.35em] text-[var(--muted)]">Profile</p>
             <p className="mt-4 text-lg leading-8 text-[var(--muted)] max-w-3xl">
               Computer Science Engineering student and full-stack developer with a demonstrated ability to design and deliver scalable web
@@ -58,12 +58,16 @@ software engineering challenges.
             </div>
           </div>
 
-          <div className="flex items-center justify-center rounded-full bg-[var(--surface-2)] p-5 shadow-[0_20px_60px_rgba(0,0,0,0.12)]">
-            <img
-              src={profilePic}
-              alt="Profile"
-              className="h-48 w-48 rounded-full object-cover"
-            />
+          <div className="order-first xl:order-last w-full flex items-center justify-center">
+            <div className="rounded-full p-1 bg-gradient-to-tr from-[var(--accent)] to-[var(--accent-2)] shadow-[0_30px_80px_rgba(0,0,0,0.18)] transition-transform hover:scale-105">
+              <div className="rounded-full bg-[var(--surface-2)] p-4">
+                <img
+                  src={profilePic}
+                  alt="Profile"
+                  className="h-40 w-40 md:h-48 md:w-48 rounded-full object-cover block"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
