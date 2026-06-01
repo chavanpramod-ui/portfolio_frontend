@@ -36,12 +36,12 @@ software engineering challenges.
               <div className="rounded-3xl bg-[var(--surface-2)] p-5 border border-[var(--border)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
                 <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">LinkedIn</p>
                 <a
-                  href="https://linkedin.com/in/pramod-chavan"
+                  href="https://www.linkedin.com/in/chavan-pramod"
                   target="_blank"
                   rel="noreferrer noopener"
                   className="mt-3 block font-semibold text-[var(--text)] hover:text-[var(--accent)] transition-colors"
                 >
-                  linkedin.com/in/pramod-chavan
+                  www.linkedin.com/in/chavan-pramod
                 </a>
               </div>
               <div className="rounded-3xl bg-[var(--surface-2)] p-5 border border-[var(--border)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
@@ -52,7 +52,7 @@ software engineering challenges.
                   rel="noreferrer noopener"
                   className="mt-3 block font-semibold text-[var(--text)] hover:text-[var(--accent)] transition-colors"
                 >
-                  github.com/chavanpramod-ui
+                  https://github.com/chavanpramod-ui
                 </a>
               </div>
             </div>
