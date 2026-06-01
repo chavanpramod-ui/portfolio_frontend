@@ -26,7 +26,7 @@ const Awards = () => {
 
         <ul className="space-y-6 text-[var(--muted)] leading-relaxed">
           {awards.map((award, idx) => (
-            <li key={idx} className="rounded-3xl border border-[var(--border)] bg-[var(--surface-2)] p-6">
+            <li key={idx} className="rounded-3xl border border-[var(--border)] bg-[var(--surface-2)] p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_25px_70px_rgba(0,0,0,0.08)] pop-in">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                 <div>
                   <h3 className="text-xl font-semibold text-[var(--text)]">{award.title}</h3>

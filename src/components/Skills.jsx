@@ -24,7 +24,7 @@ const Skills = () => {
 
         <div className="space-y-6">
           {skillCategories.map((category, index) => (
-            <div key={index} className="rounded-3xl border border-[var(--border)] bg-[var(--surface-2)] p-6">
+            <div key={index} className="rounded-3xl border border-[var(--border)] bg-[var(--surface-2)] p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_25px_70px_rgba(0,0,0,0.08)] pop-in">
               <h3 className="text-xl font-semibold text-[var(--text)] mb-3">{category.title}</h3>
               <p className="text-[var(--muted)] leading-relaxed">{category.skills.join(' • ')}</p>
             </div>

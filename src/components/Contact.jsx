@@ -1,5 +1,9 @@
 import { useState } from 'react';
 
+// Use Vite env vars when available, fallback to localhost
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const CONTACT_ENDPOINT = import.meta.env.VITE_CONTACT_ENDPOINT || '/api/contact';
+
 const Contact = () => {
   // State to hold form input
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -18,7 +22,7 @@ const Contact = () => {
 
     try {
       // Send the POST request to your Express backend
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const response = await fetch(`${API_BASE}${CONTACT_ENDPOINT}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -61,7 +65,7 @@ const Contact = () => {
             <div className="space-y-6">
               <div className="flex items-center text-[var(--muted)]">
                 <span className="mr-4 text-[var(--accent-2)] text-2xl">📍</span>
-                <span className="text-lg">Nashik, Maharashtra</span>
+                <span className="text-lg"> Mumbai, Maharashtra</span>
               </div>
               <div className="flex items-center text-[var(--muted)]">
                 <span className="mr-4 text-[var(--accent)] text-2xl">📧</span>
