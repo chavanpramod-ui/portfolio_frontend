@@ -41,7 +41,7 @@ software engineering challenges.
                   rel="noreferrer noopener"
                   className="mt-3 block font-semibold text-[var(--text)] hover:text-[var(--accent)] transition-colors"
                 >
-                  www.linkedin.com/in/chavan-pramod
+                  Linkedin.com
                 </a>
               </div>
               <div className="rounded-3xl bg-[var(--surface-2)] p-5 border border-[var(--border)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
@@ -52,7 +52,7 @@ software engineering challenges.
                   rel="noreferrer noopener"
                   className="mt-3 block font-semibold text-[var(--text)] hover:text-[var(--accent)] transition-colors"
                 >
-                  https://github.com/chavanpramod-ui
+                  Github.com
                 </a>
               </div>
             </div>
