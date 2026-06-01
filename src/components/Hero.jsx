@@ -52,7 +52,7 @@ software engineering challenges.
                   rel="noreferrer noopener"
                   className="mt-3 block font-semibold text-[var(--text)] hover:text-[var(--accent)] transition-colors"
                 >
-                  Github.com
+                  GitHub.com
                 </a>
               </div>
             </div>
