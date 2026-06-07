@@ -7,6 +7,7 @@ import Awards from './components/Awards';
 import Education from './components/Education';
 import ProjectGallery from './components/ProjectGallery';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -68,6 +69,8 @@ function App() {
           <Contact />
         </div>
       </main>
+
+      <Footer />
 
       {showScrollTop && (
         <button
