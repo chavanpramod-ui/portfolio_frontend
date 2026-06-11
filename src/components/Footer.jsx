@@ -10,7 +10,7 @@ function Footer() {
         <div className="space-y-2 text-sm text-[var(--text)] sm:text-right">
           <p>Let's connect:</p>
           <p>pramodc431510@gmail.com.com</p>
-          <p className="text-[var(--muted)]">© {new Date().getFullYear()} Pramod Chacvan. All rights reserved.</p>
+          <p className="text-[var(--muted)]">© {new Date().getFullYear()} Pramod Chavan. All rights reserved.</p>
         </div>
       </div>
     </footer>
