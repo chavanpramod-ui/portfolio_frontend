@@ -70,7 +70,7 @@ const ProjectGallery = () => {
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="bg-[var(--surface)] rounded-3xl border border-[var(--border)] p-8 shadow-lg hover:border-[var(--accent)]/50 transition-all duration-300 group fade-in-up"
+              className="bg-[var(--surface)] rounded-3xl border border-[var(--border)] p-8 shadow-lg hover:border-[var(--accent)]/50 transition-all duration-300 group fade-in-up premium-hover"
             >
               <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <span className="text-[var(--accent)] text-sm font-semibold uppercase tracking-[0.2em]">{project.type}</span>

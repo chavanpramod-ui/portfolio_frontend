@@ -12,7 +12,7 @@ const Hero = () => {
               Computer Science Engineering student and full-stack developer with a demonstrated ability to design and deliver scalable web
 applications using the MERN stack. Experienced in building end-to-end features, complex business logic, and real-time
 dashboards. Highly skilled in Data Structures and Algorithms with a passion for clean code architecture and solving real-world
-software engineering challenges.
+software engineering challenges
 
             </p>
 

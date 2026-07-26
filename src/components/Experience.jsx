@@ -23,7 +23,7 @@ const Experience = () => {
 
         <div className="space-y-8">
           {roles.map((role, index) => (
-            <article key={index} className="bg-[var(--surface-2)] p-8 rounded-3xl border border-[var(--border)] shadow-lg hover:border-[var(--accent)]/40 transition-all duration-300">
+            <article key={index} className="bg-[var(--surface-2)] p-8 rounded-3xl border border-[var(--border)] shadow-lg hover:border-[var(--accent)]/40 transition-all duration-300 premium-hover">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
                 <div>
                   <h3 className="text-2xl font-semibold text-[var(--text)]">{role.title}</h3>

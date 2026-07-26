@@ -140,3 +140,13 @@ body {
   background-color: var(--page-bg);
   color: var(--text);
 }
+
+.premium-hover {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+.premium-hover:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 20px 40px -10px var(--nav-accent), 0 0 20px rgba(53, 214, 196, 0.2) !important;
+  border-color: var(--accent) !important;
+}
