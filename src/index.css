@@ -15,23 +15,25 @@
   --gradient-end: #2fb7e6;
   --nav-bg: linear-gradient(180deg, rgba(11,20,32,0.6), rgba(11,20,32,0.45));
   --nav-accent: rgba(53,214,196,0.12);
+  --hover-glow: rgba(53,214,196,0.2);
 }
 
 .light {
-  /* Light theme counterpart */
+  /* Premium Light (Golden) theme */
   color-scheme: light;
-  --page-bg: #dbf6ea; /* pale mint background like the screenshot */
+  --page-bg: #fdfcf9; /* warm alabaster background */
   --surface: #ffffff; /* white cards */
-  --surface-2: #f3fbf8; /* very light mint for nested cards */
-  --text: #0f5560; /* deep teal text */
-  --muted: #4aa79f; /* muted teal for labels */
-  --border: #d6efe8; /* soft mint border */
-  --accent: #3fcdb8; /* mint button */
-  --accent-2: #2fb7e6; /* cyan secondary accent */
-  --gradient-start: #3fcdb8;
-  --gradient-end: #2fb7e6;
-  --nav-bg: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));
-  --nav-accent: rgba(63,205,184,0.12);
+  --surface-2: #f7f5f0; /* very light warm gold for nested cards */
+  --text: #2d2926; /* rich charcoal text */
+  --muted: #8a7f72; /* warm muted grey/brown for labels */
+  --border: #e8e4db; /* soft warm border */
+  --accent: #d4af37; /* metallic gold primary accent */
+  --accent-2: #b8860b; /* dark goldenrod secondary accent */
+  --gradient-start: #d4af37;
+  --gradient-end: #f1dd8a; /* champagne gold */
+  --nav-bg: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));
+  --nav-accent: rgba(212,175,55,0.15);
+  --hover-glow: rgba(212,175,55,0.25);
 }
 
 * {
@@ -147,6 +149,6 @@ body {
 
 .premium-hover:hover {
   transform: translateY(-8px) !important;
-  box-shadow: 0 20px 40px -10px var(--nav-accent), 0 0 20px rgba(53, 214, 196, 0.2) !important;
+  box-shadow: 0 20px 40px -10px var(--nav-accent), 0 0 20px var(--hover-glow) !important;
   border-color: var(--accent) !important;
 }
