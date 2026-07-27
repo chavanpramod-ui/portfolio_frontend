@@ -19,21 +19,21 @@
 }
 
 .light {
-  /* Premium Light (Golden) theme */
+  /* Premium Light (Golden) theme - Softer */
   color-scheme: light;
   --page-bg: #fdfcf9; /* warm alabaster background */
   --surface: #ffffff; /* white cards */
-  --surface-2: #f7f5f0; /* very light warm gold for nested cards */
+  --surface-2: #fcfaf5; /* very subtle warm gold for nested cards */
   --text: #2d2926; /* rich charcoal text */
-  --muted: #8a7f72; /* warm muted grey/brown for labels */
-  --border: #e8e4db; /* soft warm border */
-  --accent: #d4af37; /* metallic gold primary accent */
-  --accent-2: #b8860b; /* dark goldenrod secondary accent */
-  --gradient-start: #d4af37;
-  --gradient-end: #f1dd8a; /* champagne gold */
+  --muted: #94897d; /* slightly softer muted grey/brown for labels */
+  --border: #f0ead6; /* soft champagne border */
+  --accent: #e5cb7c; /* soft pale gold primary accent */
+  --accent-2: #cba135; /* muted dark goldenrod secondary accent */
+  --gradient-start: #e5cb7c;
+  --gradient-end: #fbf5df; /* very light ivory gold */
   --nav-bg: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));
-  --nav-accent: rgba(212,175,55,0.15);
-  --hover-glow: rgba(212,175,55,0.25);
+  --nav-accent: rgba(229,203,124,0.2);
+  --hover-glow: rgba(229,203,124,0.3);
 }
 
 * {
