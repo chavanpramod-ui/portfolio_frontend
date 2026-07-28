@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  /* Premium Dark theme - Monochromatic Pink */
+  /* Premium Dark theme - Black & Gold */
   color-scheme: dark;
-  --page-bg: #12090e; /* deep warm dark */
-  --surface: #1e1117; /* card surface */
-  --surface-2: #2a1820; /* slightly lighter surface for nested cards */
-  --text: #fdf5f7; /* soft off-white text */
-  --muted: #a38b93; /* muted descriptive text */
-  --border: rgba(255, 105, 180, 0.15); /* subtle pink border */
-  --accent: #ffb6c1; /* light pink primary accent */
-  --accent-2: #ff69b4; /* hot pink secondary accent */
-  --gradient-start: #ffb6c1;
-  --gradient-end: #ff69b4;
-  --nav-bg: linear-gradient(180deg, rgba(18,9,14,0.7), rgba(18,9,14,0.45));
-  --nav-accent: rgba(255,182,193,0.12);
-  --hover-glow: rgba(255,105,180,0.2);
+  --page-bg: #0a0a0a; /* deep black */
+  --surface: #141414; /* card surface */
+  --surface-2: #1e1e1e; /* slightly lighter surface for nested cards */
+  --text: #f5f5f5; /* soft off-white text */
+  --muted: #a3a3a3; /* muted descriptive text */
+  --border: rgba(229, 203, 124, 0.15); /* subtle gold border */
+  --accent: #e5cb7c; /* light gold primary accent */
+  --accent-2: #cba135; /* dark gold secondary accent */
+  --gradient-start: #e5cb7c;
+  --gradient-end: #cba135;
+  --nav-bg: linear-gradient(180deg, rgba(10,10,10,0.8), rgba(10,10,10,0.5));
+  --nav-accent: rgba(229,203,124,0.12);
+  --hover-glow: rgba(229,203,124,0.2);
 }
 
 .light {
