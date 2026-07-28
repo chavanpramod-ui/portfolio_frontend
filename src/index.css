@@ -1,39 +1,39 @@
 @import "tailwindcss";
 
 :root {
-  /* Premium Dark theme - Light Pink & Gold */
+  /* Premium Dark theme - Monochromatic Pink */
   color-scheme: dark;
   --page-bg: #12090e; /* deep warm dark */
   --surface: #1e1117; /* card surface */
   --surface-2: #2a1820; /* slightly lighter surface for nested cards */
   --text: #fdf5f7; /* soft off-white text */
   --muted: #a38b93; /* muted descriptive text */
-  --border: rgba(229, 203, 124, 0.15); /* subtle gold border */
+  --border: rgba(255, 105, 180, 0.15); /* subtle pink border */
   --accent: #ffb6c1; /* light pink primary accent */
-  --accent-2: #e5cb7c; /* golden secondary accent */
+  --accent-2: #ff69b4; /* hot pink secondary accent */
   --gradient-start: #ffb6c1;
-  --gradient-end: #e5cb7c;
+  --gradient-end: #ff69b4;
   --nav-bg: linear-gradient(180deg, rgba(18,9,14,0.7), rgba(18,9,14,0.45));
   --nav-accent: rgba(255,182,193,0.12);
-  --hover-glow: rgba(229,203,124,0.2);
+  --hover-glow: rgba(255,105,180,0.2);
 }
 
 .light {
-  /* Premium Light theme - Light Pink & Gold */
+  /* Premium Light theme - Monochromatic Pink */
   color-scheme: light;
   --page-bg: #fffcfd; /* very soft warm pinkish white */
   --surface: #ffffff; /* white cards */
   --surface-2: #fff5f7; /* very subtle warm pink for nested cards */
   --text: #2d2426; /* rich charcoal text */
   --muted: #8a7a7d; /* slightly softer muted grey/brown for labels */
-  --border: rgba(229, 203, 124, 0.4); /* soft gold border */
-  --accent: #e5cb7c; /* golden primary accent */
+  --border: rgba(255, 105, 180, 0.4); /* soft pink border */
+  --accent: #ff69b4; /* hot pink primary accent */
   --accent-2: #ffb6c1; /* light pink secondary accent */
   --gradient-start: #ffb6c1;
-  --gradient-end: #e5cb7c; 
+  --gradient-end: #ff69b4; 
   --nav-bg: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));
   --nav-accent: rgba(255,182,193,0.2);
-  --hover-glow: rgba(229,203,124,0.3);
+  --hover-glow: rgba(255,105,180,0.3);
 }
 
 * {
