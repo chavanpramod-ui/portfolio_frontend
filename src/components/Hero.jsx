@@ -9,10 +9,9 @@ const Hero = () => {
           <div className="order-last xl:order-first xl:max-w-3xl xl:flex-1">
             <p className="text-sm uppercase tracking-[0.35em] text-[var(--muted)]">Profile</p>
             <p className="mt-4 text-lg leading-8 text-[var(--muted)] max-w-3xl">
-              Computer Science Engineering student and full-stack developer with a demonstrated ability to design and deliver scalable web
-applications using the MERN stack. Experienced in building end-to-end features, complex business logic, and real-time
-dashboards. Highly skilled in Data Structures and Algorithms with a passion for clean code architecture and solving real-world
-software engineering challenges
+              Full-stack developer skilled in building end-to-end features using React, Node.js, and MongoDB. Experienced in REST API integration,
+JWT-based authentication, real-time systems with Socket.io, and scalable database design. Writes clean, maintainable code and actively
+strengthening DSA skills in Java. Seeking a growth-stage team where ownership and product impact matter
 
             </p>
 
