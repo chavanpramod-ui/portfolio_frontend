@@ -25,8 +25,17 @@ const Skills = () => {
         <div className="space-y-6">
           {skillCategories.map((category, index) => (
             <div key={index} className="rounded-3xl border border-[var(--border)] bg-[var(--surface-2)] p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_25px_70px_rgba(0,0,0,0.08)] pop-in premium-hover">
-              <h3 className="text-xl font-semibold text-[var(--text)] mb-3">{category.title}</h3>
-              <p className="text-[var(--muted)] leading-relaxed">{category.skills.join(' • ')}</p>
+              <h3 className="text-xl font-semibold text-[var(--text)] mb-4">{category.title}</h3>
+              <div className="flex flex-wrap gap-3">
+                {category.skills.map((skill, skillIndex) => (
+                  <span 
+                    key={skillIndex} 
+                    className="px-4 py-2 rounded-full text-sm font-medium bg-[var(--surface)] text-[var(--text)] border border-[var(--border)] shadow-sm transition-all duration-300 hover:border-[var(--accent)] hover:shadow-[0_0_15px_var(--hover-glow)] hover:-translate-y-0.5 cursor-default"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>
