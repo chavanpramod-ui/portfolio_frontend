@@ -83,22 +83,6 @@ a {
   }
 }
 
-.fade-in-up {
-  animation: fadeInUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-.animate-slide-down {
-  animation: slideDownFade 0.65s ease-out both;
-}
-
-.pop-in {
-  animation: popIn 0.55s cubic-bezier(0.4, 0, 0.2, 1) both;
-}
-
-.float-slow {
-  animation: floatUp 4s ease-in-out infinite;
-}
-
 @keyframes slideDownFade {
   from {
     opacity: 0;
@@ -121,111 +105,6 @@ a {
   }
 }
 
-.glow-border {
-  box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.12), 0 28px 60px -30px rgba(14, 165, 233, 0.45);
-}
-
-.gradient-text {
-  background-image: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
-
-body {
-  background-color: var(--page-bg);
-  color: var(--text);
-@import "tailwindcss";
-
-:root {
-  /* Premium Dark theme - Black & Gold */
-  color-scheme: dark;
-  --page-bg: #0a0a0a; /* deep black */
-  --surface: #141414; /* card surface */
-  --surface-2: #1e1e1e; /* slightly lighter surface for nested cards */
-  --text: #f5f5f5; /* soft off-white text */
-  --muted: #a3a3a3; /* muted descriptive text */
-  --border: rgba(229, 203, 124, 0.15); /* subtle gold border */
-  --accent: #e5cb7c; /* light gold primary accent */
-  --accent-2: #cba135; /* dark gold secondary accent */
-  --gradient-start: #e5cb7c;
-  --gradient-end: #cba135;
-  --nav-bg: linear-gradient(180deg, rgba(10,10,10,0.8), rgba(10,10,10,0.5));
-  --nav-accent: rgba(229,203,124,0.12);
-  --hover-glow: rgba(229,203,124,0.2);
-}
-
-.light {
-  /* Premium Light theme - Monochromatic Pink */
-  color-scheme: light;
-  --page-bg: #fffcfd; /* very soft warm pinkish white */
-  --surface: #ffffff; /* white cards */
-  --surface-2: #fff5f7; /* very subtle warm pink for nested cards */
-  --text: #2d2426; /* rich charcoal text */
-  --muted: #8a7a7d; /* slightly softer muted grey/brown for labels */
-  --border: rgba(255, 105, 180, 0.4); /* soft pink border */
-  --accent: #ff69b4; /* hot pink primary accent */
-  --accent-2: #ffb6c1; /* light pink secondary accent */
-  --gradient-start: #ffb6c1;
-  --gradient-end: #ff69b4; 
-  --nav-bg: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));
-  --nav-accent: rgba(255,182,193,0.2);
-  --hover-glow: rgba(255,105,180,0.3);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  min-height: 100%;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  background-color: var(--page-bg);
-  color: var(--text);
-  font-family: 'Outfit', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-button,
-a {
-  transition: all 0.3s ease;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes floatUp {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
 .fade-in-up {
   animation: fadeInUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -242,28 +121,6 @@ a {
   animation: floatUp 4s ease-in-out infinite;
 }
 
-@keyframes slideDownFade {
-  from {
-    opacity: 0;
-    transform: translateY(-18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes popIn {
-  from {
-    opacity: 0;
-    transform: scale(0.96);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
 .glow-border {
   box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.12), 0 28px 60px -30px rgba(14, 165, 233, 0.45);
 }
@@ -279,11 +136,6 @@ input:focus-visible,
 textarea:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
-}
-
-body {
-  background-color: var(--page-bg);
-  color: var(--text);
 }
 
 .premium-hover {
@@ -328,4 +180,3 @@ body {
 .skill-pill:hover::before {
   left: 100%;
 }
-
