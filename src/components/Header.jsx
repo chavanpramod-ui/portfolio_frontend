@@ -4,10 +4,10 @@ const Header = ({ theme, toggleTheme, activeSection, setActiveSection }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const linkClass = (section) =>
-    `inline-flex items-center gap-2 px-3 py-2 rounded-full font-medium transition ${
+    `relative px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
       activeSection === section
-        ? 'bg-[var(--accent)] text-[var(--surface)] shadow-sm'
-        : 'text-[var(--muted)] hover:text-[var(--text)] bg-transparent'
+        ? 'bg-[var(--accent)] text-[var(--surface)] shadow-[0_4px_12px_var(--hover-glow)] transform scale-105'
+        : 'text-[var(--text)] hover:text-[var(--accent)] hover:bg-[var(--surface-2)] bg-transparent'
     }`;
 
   const handleLinkClick = (section) => {
@@ -16,14 +16,14 @@ const Header = ({ theme, toggleTheme, activeSection, setActiveSection }) => {
   };
 
   return (
-    <header
-      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm animate-slide-down"
-      style={{ background: 'var(--nav-bg)' }}
-    >
-      <div className="mx-auto max-w-6xl px-6 py-3 flex items-center justify-between gap-4 border-b border-[var(--border)] shadow-[0_6px_30px_rgba(2,6,23,0.5)]">
+    <header className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none animate-slide-down">
+      <div 
+        className="pointer-events-auto relative flex items-center justify-between gap-6 rounded-full border border-[var(--border)] px-4 py-2 shadow-[0_8px_32px_rgba(0,0,0,0.12)] backdrop-blur-md transition-all duration-300"
+        style={{ background: 'var(--nav-bg)' }}
+      >
         <button
           type="button"
-          className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-xl border border-[var(--border)] bg-[var(--surface)] text-[var(--text)]"
+          className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--text)] shadow-sm transition-transform active:scale-95"
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           onClick={() => setMenuOpen((prev) => !prev)}
         >
@@ -31,89 +31,31 @@ const Header = ({ theme, toggleTheme, activeSection, setActiveSection }) => {
         </button>
 
         <nav
-          className={`absolute inset-x-4 top-full mt-2 rounded-3xl border border-[var(--border)] bg-[var(--surface)]/95 p-4 shadow-xl backdrop-blur-xl transition-opacity duration-300 md:static md:top-auto md:inset-auto md:m-0 md:block md:border-0 md:bg-transparent md:p-0 md:shadow-none ${
-            menuOpen ? 'opacity-100 visible' : 'opacity-0 invisible md:opacity-100 md:visible'
+          className={`absolute top-full mt-4 left-1/2 -translate-x-1/2 w-[240px] origin-top rounded-3xl border border-[var(--border)] bg-[var(--surface)]/95 p-4 shadow-2xl backdrop-blur-xl transition-all duration-300 md:static md:mt-0 md:w-auto md:translate-x-0 md:border-0 md:bg-transparent md:p-0 md:shadow-none ${
+            menuOpen ? 'opacity-100 visible scale-y-100' : 'opacity-0 invisible scale-y-95 md:scale-y-100 md:opacity-100 md:visible'
           }`}
         >
-          <ul className="flex flex-col gap-2 md:flex-row md:items-center md:justify-center md:gap-3">
-            <li>
-              <a
-                href="#hero"
-                onClick={() => handleLinkClick('hero')}
-                aria-current={activeSection === 'hero' ? 'page' : undefined}
-                className={linkClass('hero')}
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="#skills"
-                onClick={() => handleLinkClick('skills')}
-                aria-current={activeSection === 'skills' ? 'page' : undefined}
-                className={linkClass('skills')}
-              >
-                Skills
-              </a>
-            </li>
-            <li>
-              <a
-                href="#experience"
-                onClick={() => handleLinkClick('experience')}
-                aria-current={activeSection === 'experience' ? 'page' : undefined}
-                className={linkClass('experience')}
-              >
-                Experience
-              </a>
-            </li>
-            <li>
-              <a
-                href="#awards"
-                onClick={() => handleLinkClick('awards')}
-                aria-current={activeSection === 'awards' ? 'page' : undefined}
-                className={linkClass('awards')}
-              >
-                Awards
-              </a>
-            </li>
-            <li>
-              <a
-                href="#education"
-                onClick={() => handleLinkClick('education')}
-                aria-current={activeSection === 'education' ? 'page' : undefined}
-                className={linkClass('education')}
-              >
-                Education
-              </a>
-            </li>
-            <li>
-              <a
-                href="#projects"
-                onClick={() => handleLinkClick('projects')}
-                aria-current={activeSection === 'projects' ? 'page' : undefined}
-                className={linkClass('projects')}
-              >
-                Projects
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                onClick={() => handleLinkClick('contact')}
-                aria-current={activeSection === 'contact' ? 'page' : undefined}
-                className={linkClass('contact')}
-              >
-                Contact
-              </a>
-            </li>
+          <ul className="flex flex-col gap-2 md:flex-row md:items-center md:justify-center md:gap-1">
+            {['hero', 'skills', 'experience', 'awards', 'education', 'projects', 'contact'].map((section) => (
+              <li key={section}>
+                <a
+                  href={`#${section}`}
+                  onClick={() => handleLinkClick(section)}
+                  aria-current={activeSection === section ? 'page' : undefined}
+                  className={`block text-center md:inline-block ${linkClass(section)}`}
+                >
+                  {section === 'hero' ? 'Home' : section.charAt(0).toUpperCase() + section.slice(1)}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
 
-        <div className="ml-auto flex items-center gap-3">
+        <div className="flex items-center">
           <button
             onClick={toggleTheme}
             aria-label="Toggle theme"
-            className="h-10 w-10 rounded-md border border-[var(--border)] bg-[var(--surface)] text-[var(--text)] transition hover:brightness-110"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--text)] shadow-sm transition-all hover:scale-110 hover:shadow-[0_4px_12px_var(--hover-glow)] hover:border-[var(--accent)]"
           >
             {theme === 'dark' ? '☀️' : '🌙'}
           </button>
