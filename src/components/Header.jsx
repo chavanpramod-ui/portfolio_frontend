@@ -18,7 +18,7 @@ const Header = ({ theme, toggleTheme, activeSection, setActiveSection }) => {
   return (
     <header className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none animate-slide-down">
       <div 
-        className="pointer-events-auto relative flex items-center justify-between gap-6 rounded-full border border-[var(--border)] px-4 py-2 shadow-[0_8px_32px_rgba(0,0,0,0.12)] backdrop-blur-md transition-all duration-300"
+        className="pointer-events-auto relative flex w-full max-w-5xl items-center justify-between gap-6 rounded-full border border-[var(--border)] px-6 py-2.5 shadow-[0_8px_32px_rgba(0,0,0,0.12)] backdrop-blur-md transition-all duration-300"
         style={{ background: 'var(--nav-bg)' }}
       >
         <button
