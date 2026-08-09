@@ -52,6 +52,30 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const animationObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    const timeout = setTimeout(() => {
+      const animatedElements = document.querySelectorAll('.fade-in-up, .pop-in');
+      animatedElements.forEach((el) => animationObserver.observe(el));
+    }, 100);
+
+    return () => {
+      clearTimeout(timeout);
+      animationObserver.disconnect();
+    };
+  }, []);
+
   const toggleTheme = () => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
 
   return (
