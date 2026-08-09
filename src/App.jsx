@@ -85,19 +85,29 @@ function App() {
           sections.forEach(section => {
             const rect = section.getBoundingClientRect();
             
-            // Only apply parallax when section is scrolling up past the viewport top
+            // Apply parallax when the section is scrolling up past the viewport top
             if (rect.top <= 0 && rect.bottom >= 0) {
-              const progress = Math.abs(rect.top) / (window.innerHeight * 0.75);
-              const clampedProgress = Math.min(1, Math.max(0, progress));
+              // Calculate progress as a percentage of the section's total height
+              const progress = Math.abs(rect.top) / section.offsetHeight;
               
-              // Scale down slightly to 0.92, fade opacity, and translate down to simulate parallax depth
-              const scale = 1 - (clampedProgress * 0.08);
-              const opacity = 1 - (clampedProgress * 1.2); 
-              const translateY = clampedProgress * 120;
+              // Only start fading/scaling in the last 25% of the section's scroll
+              // This guarantees the user can read all content in tall sections
+              const fadeProgress = Math.max(0, (progress - 0.75) * 4);
+              const clampedProgress = Math.min(1, fadeProgress);
               
-              section.style.transform = `translateY(${translateY}px) scale(${scale})`;
-              section.style.opacity = Math.max(0, opacity);
-              section.style.transformOrigin = 'top center';
+              if (clampedProgress > 0) {
+                // Scale down slightly, fade opacity, and translate down
+                const scale = 1 - (clampedProgress * 0.05);
+                const opacity = 1 - (clampedProgress * 1.5); 
+                const translateY = clampedProgress * 50;
+                
+                section.style.transform = `translateY(${translateY}px) scale(${scale})`;
+                section.style.opacity = Math.max(0, opacity);
+                section.style.transformOrigin = 'top center';
+              } else {
+                section.style.transform = 'none';
+                section.style.opacity = 1;
+              }
             } else {
               // Reset styles when fully in view or below viewport
               section.style.transform = 'none';
