@@ -76,6 +76,47 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    let ticking = false;
+    const handleParallax = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const sections = document.querySelectorAll('section[id]');
+          sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            
+            // Only apply parallax when section is scrolling up past the viewport top
+            if (rect.top <= 0 && rect.bottom >= 0) {
+              const progress = Math.abs(rect.top) / (window.innerHeight * 0.75);
+              const clampedProgress = Math.min(1, Math.max(0, progress));
+              
+              // Scale down slightly to 0.92, fade opacity, and translate down to simulate parallax depth
+              const scale = 1 - (clampedProgress * 0.08);
+              const opacity = 1 - (clampedProgress * 1.2); 
+              const translateY = clampedProgress * 120;
+              
+              section.style.transform = `translateY(${translateY}px) scale(${scale})`;
+              section.style.opacity = Math.max(0, opacity);
+              section.style.transformOrigin = 'top center';
+            } else {
+              // Reset styles when fully in view or below viewport
+              section.style.transform = 'none';
+              section.style.opacity = 1;
+            }
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', handleParallax, { passive: true });
+    // Initial call
+    handleParallax();
+    
+    return () => window.removeEventListener('scroll', handleParallax);
+  }, []);
+
   const toggleTheme = () => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
 
   return (
