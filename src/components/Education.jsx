@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Education = () => {
   const educationList = [
     {
@@ -19,45 +21,58 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-20 bg-[var(--surface-2)] text-[var(--text)] px-6 border-t border-[var(--border)] fade-in-up">
-      <div className="max-w-4xl mx-auto">
-        
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">
-          Education & Academic Journey
-        </h2>
+    <section id="education" className="relative py-24 overflow-hidden">
+      {/* Decorative Background Blob */}
+      <div className="absolute top-1/3 left-0 -translate-x-1/3 w-[600px] h-[600px] bg-[var(--accent)] rounded-full blur-[150px] opacity-10 pointer-events-none"></div>
+
+      <div className="relative mx-auto max-w-5xl px-6">
+        <div className="mb-16 flex flex-col items-center text-center fade-in-up">
+          <span className="inline-block px-4 py-1.5 mb-6 rounded-full border border-[var(--border)] bg-[var(--surface-2)]/80 backdrop-blur-md text-xs font-bold uppercase tracking-[0.3em] text-[var(--accent)] shadow-sm">
+            Academic Background
+          </span>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-[var(--text)]">
+            Education & <span className="gradient-text">Journey</span>
+          </h2>
+          <p className="mt-4 max-w-2xl text-[var(--muted)]">
+            The foundation of my engineering knowledge and technical problem-solving abilities.
+          </p>
+        </div>
 
         {/* Timeline Container */}
         <div className="relative border-l-2 border-[var(--border)] ml-3 md:ml-6 space-y-12">
           
-          {educationList.map((item) => (
+          {educationList.map((item, index) => (
             <div key={item.id} className="relative pl-8 md:pl-12">
               
               {/* Glowing Timeline Dot */}
-              <div className="absolute -left-2.25 top-1.5 w-4 h-4 bg-[var(--surface)] border-2 border-[var(--accent)] rounded-full shadow-[0_0_10px_rgba(139,92,246,0.3)]"></div>
+              <div className="absolute -left-[9px] top-10 w-4 h-4 bg-[var(--surface)] border-2 border-[var(--accent)] rounded-full shadow-[0_0_15px_var(--hover-glow)]"></div>
               
               {/* Content Card */}
-              <div className="bg-[var(--surface)] p-6 md:p-8 rounded-2xl border border-[var(--border)] shadow-lg hover:border-[var(--accent)]/30 transition-colors duration-300 premium-hover">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+              <div className="group relative flex flex-col rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-xl p-8 md:p-10 shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_-10px_var(--hover-glow)] hover:border-[var(--accent)]/50 pop-in" style={{ animationDelay: `${index * 150}ms` }}>
+                {/* Card Inner Gradient Hover */}
+                <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-[var(--nav-accent)] to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-10 pointer-events-none"></div>
+
+                <div className="relative z-10 flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-6">
                   <div>
-                    <h3 className="text-2xl font-bold text-[var(--text)]">{item.degree}</h3>
-                    <h4 className="text-lg text-[var(--accent)] font-medium mt-1">{item.institution}</h4>
+                    <h3 className="text-2xl md:text-3xl font-bold text-[var(--text)]">{item.degree}</h3>
+                    <p className="mt-2 text-lg font-medium text-[var(--accent)]">{item.institution}</p>
                   </div>
-                  <span className="mt-2 md:mt-0 px-4 py-1 bg-[var(--surface)] border border-[var(--border)] rounded-full text-sm text-[var(--muted)] font-semibold inline-block w-max">
+                  <span className="inline-flex px-5 py-2.5 text-sm font-semibold text-[var(--text)] bg-[var(--surface-2)] border border-[var(--border)] rounded-full shadow-sm whitespace-nowrap self-start">
                     {item.duration}
                   </span>
                 </div>
                 
-                <p className="text-[var(--muted)] leading-relaxed mb-6">
+                <p className="relative z-10 text-[var(--muted)] leading-relaxed text-base md:text-lg mb-8">
                   {item.description}
                 </p>
 
                 {/* Coursework/Highlights Tags */}
                 {item.highlights.length > 0 && (
-                  <div className="flex flex-wrap gap-2">
-                    {item.highlights.map((highlight, index) => (
+                  <div className="relative z-10 flex flex-wrap gap-3">
+                    {item.highlights.map((highlight, idx) => (
                       <span 
-                        key={index} 
-                        className="px-3 py-1 bg-[var(--surface)] border border-[var(--border)] rounded-md text-xs font-medium text-[var(--accent)]"
+                        key={idx} 
+                        className="px-4 py-2 bg-[var(--surface-2)] border border-[var(--border)] rounded-full text-sm font-medium text-[var(--text)] shadow-sm transition-transform hover:-translate-y-1 hover:shadow-md hover:border-[var(--accent)]"
                       >
                         {highlight}
                       </span>
