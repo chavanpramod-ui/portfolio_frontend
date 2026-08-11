@@ -21,49 +21,50 @@ const Experience = () => {
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[600px] h-[600px] bg-[var(--accent-2)] rounded-full blur-[160px] opacity-[0.08] pointer-events-none"></div>
 
       <div className="relative mx-auto max-w-4xl px-6">
-        <div className="mb-16">
-          <span className="inline-block px-3 py-1 mb-4 rounded-full bg-[var(--surface-2)]/50 border border-[var(--border)] text-xs font-semibold uppercase tracking-widest text-[var(--accent)] backdrop-blur-md">
+        <div className="mb-16 flex flex-col items-center text-center fade-in-up">
+          <span className="inline-block px-4 py-1.5 mb-6 rounded-full border border-[var(--border)] bg-[var(--surface-2)]/80 backdrop-blur-md text-xs font-bold uppercase tracking-[0.3em] text-[var(--accent)] shadow-sm">
             Career Journey
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[var(--text)]">
-            Professional Experience
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-[var(--text)]">
+            Professional <span className="gradient-text">Experience</span>
           </h2>
+          <p className="mt-4 max-w-2xl text-[var(--muted)]">
+            A summary of my professional roles and the value I've delivered through hands-on development.
+          </p>
         </div>
 
-        {/* Minimalist Left-Aligned Timeline */}
-        <div className="relative border-l border-[var(--border)] ml-3 md:ml-4 space-y-12 pb-8">
-          
+        {/* Grid Layout matching Projects/Skills */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {roles.map((role, index) => (
-            <div key={index} className="relative pl-8 md:pl-12 group fade-in-up" style={{ animationDelay: `${index * 150}ms` }}>
+            <div 
+              key={index} 
+              className="group relative flex flex-col rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-xl p-8 shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_-10px_var(--hover-glow)] hover:border-[var(--accent)]/50 pop-in"
+              style={{ animationDelay: `${index * 150}ms` }}
+            >
+              {/* Card Inner Gradient Hover */}
+              <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-[var(--nav-accent)] to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-10 pointer-events-none"></div>
               
-              {/* Timeline Dot */}
-              <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-[var(--accent)] shadow-[0_0_10px_var(--hover-glow)] ring-4 ring-[var(--page-bg)] transition-transform duration-300 group-hover:scale-150"></div>
-              
-              {/* Content Box */}
-              <article className="relative rounded-2xl bg-gradient-to-br from-[var(--surface-2)]/30 to-transparent border border-[var(--border)] p-6 md:p-8 backdrop-blur-sm transition-all duration-300 hover:border-[var(--accent)]/40 hover:bg-[var(--surface)]/50 hover:shadow-lg">
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
-                  <div>
-                    <h3 className="text-2xl font-semibold text-[var(--text)] tracking-tight">{role.title}</h3>
-                    <p className="mt-1 text-lg text-[var(--accent)] font-medium">{role.company}</p>
-                  </div>
-                  <span className="inline-flex px-4 py-1.5 text-sm font-medium text-[var(--text)] bg-[var(--page-bg)] border border-[var(--border)] rounded-full shrink-0">
+              <div className="relative z-10 flex-1">
+                <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+                  <span className="inline-flex px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-[var(--text)] bg-[var(--surface-2)] border border-[var(--border)] rounded-full shadow-sm">
                     {role.duration}
                   </span>
                 </div>
-
-                <ul className="space-y-3">
+                
+                <h3 className="text-2xl md:text-3xl font-bold mb-2 text-[var(--text)]">{role.title}</h3>
+                <p className="text-lg text-[var(--accent)] font-medium mb-6">{role.company}</p>
+                
+                <ul className="space-y-3 mb-8">
                   {role.highlights.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3 text-[var(--muted)] leading-relaxed text-base">
-                      <span className="mt-2.5 w-1.5 h-1.5 shrink-0 rounded-full bg-[var(--border)] transition-colors duration-300 group-hover:bg-[var(--accent)]/50"></span>
+                      <svg className="w-5 h-5 shrink-0 text-[var(--accent)] mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
-              </article>
-
+              </div>
             </div>
           ))}
-
         </div>
       </div>
     </section>

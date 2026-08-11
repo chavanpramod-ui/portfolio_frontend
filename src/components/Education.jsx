@@ -26,58 +26,59 @@ const Education = () => {
       <div className="absolute top-1/3 left-0 -translate-x-1/4 w-[600px] h-[600px] bg-[var(--accent)] rounded-full blur-[160px] opacity-[0.08] pointer-events-none"></div>
 
       <div className="relative mx-auto max-w-4xl px-6">
-        <div className="mb-16">
-          <span className="inline-block px-3 py-1 mb-4 rounded-full bg-[var(--surface-2)]/50 border border-[var(--border)] text-xs font-semibold uppercase tracking-widest text-[var(--accent)] backdrop-blur-md">
+        <div className="mb-16 flex flex-col items-center text-center fade-in-up">
+          <span className="inline-block px-4 py-1.5 mb-6 rounded-full border border-[var(--border)] bg-[var(--surface-2)]/80 backdrop-blur-md text-xs font-bold uppercase tracking-[0.3em] text-[var(--accent)] shadow-sm">
             Academic Background
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[var(--text)]">
-            Education & Journey
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-[var(--text)]">
+            My <span className="gradient-text">Education</span>
           </h2>
+          <p className="mt-4 max-w-2xl text-[var(--muted)]">
+            My academic journey and foundational learning that shaped my technical expertise.
+          </p>
         </div>
 
-        {/* Minimalist Left-Aligned Timeline */}
-        <div className="relative border-l border-[var(--border)] ml-3 md:ml-4 space-y-12 pb-8">
-          
+        {/* Grid Layout matching Projects/Skills */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {educationList.map((item, index) => (
-            <div key={item.id} className="relative pl-8 md:pl-12 group fade-in-up" style={{ animationDelay: `${index * 150}ms` }}>
+            <div 
+              key={item.id} 
+              className="group relative flex flex-col rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-xl p-8 shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_-10px_var(--hover-glow)] hover:border-[var(--accent)]/50 pop-in"
+              style={{ animationDelay: `${index * 150}ms` }}
+            >
+              {/* Card Inner Gradient Hover */}
+              <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-[var(--nav-accent)] to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-10 pointer-events-none"></div>
               
-              {/* Timeline Dot */}
-              <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-[var(--accent)] shadow-[0_0_10px_var(--hover-glow)] ring-4 ring-[var(--page-bg)] transition-transform duration-300 group-hover:scale-150"></div>
-              
-              {/* Content Box */}
-              <article className="relative rounded-2xl bg-gradient-to-br from-[var(--surface-2)]/30 to-transparent border border-[var(--border)] p-6 md:p-8 backdrop-blur-sm transition-all duration-300 hover:border-[var(--accent)]/40 hover:bg-[var(--surface)]/50 hover:shadow-lg">
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
-                  <div>
-                    <h3 className="text-2xl font-semibold text-[var(--text)] tracking-tight leading-snug">{item.degree}</h3>
-                    <p className="mt-1 text-lg text-[var(--accent)] font-medium">{item.institution}</p>
-                  </div>
-                  <span className="inline-flex px-4 py-1.5 text-sm font-medium text-[var(--text)] bg-[var(--page-bg)] border border-[var(--border)] rounded-full shrink-0">
+              <div className="relative z-10 flex-1 flex flex-col">
+                <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+                  <span className="inline-flex px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-[var(--text)] bg-[var(--surface-2)] border border-[var(--border)] rounded-full shadow-sm">
                     {item.duration}
                   </span>
                 </div>
                 
-                <p className="text-[var(--muted)] leading-relaxed text-base mb-6">
+                <h3 className="text-2xl md:text-3xl font-bold mb-2 text-[var(--text)] leading-snug">{item.degree}</h3>
+                <p className="text-lg text-[var(--accent)] font-medium mb-4">{item.institution}</p>
+                
+                <p className="text-[var(--muted)] leading-relaxed text-base mb-8 flex-1">
                   {item.description}
                 </p>
 
                 {/* Coursework/Highlights Tags */}
                 {item.highlights.length > 0 && (
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mt-auto">
                     {item.highlights.map((highlight, idx) => (
                       <span 
                         key={idx} 
-                        className="px-3 py-1 bg-[var(--page-bg)]/80 border border-[var(--border)] rounded-full text-xs font-medium text-[var(--muted)] transition-colors duration-300 group-hover:border-[var(--accent)]/50 group-hover:text-[var(--text)]"
+                        className="px-3 py-1.5 bg-[var(--surface-2)] border border-[var(--border)]/60 rounded-lg text-sm font-medium text-[var(--text)] cursor-default transition-colors duration-300 group-hover:border-[var(--accent)]/50"
                       >
                         {highlight}
                       </span>
                     ))}
                   </div>
                 )}
-              </article>
-
+              </div>
             </div>
           ))}
-
         </div>
       </div>
     </section>
