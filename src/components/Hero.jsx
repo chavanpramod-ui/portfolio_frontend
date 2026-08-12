@@ -4,8 +4,6 @@ import profilePic from '../assets/profile.png';
 const Hero = () => {
   return (
     <section id="hero" className="relative pt-36 pb-24 overflow-hidden">
-      {/* Decorative Background Blob */}
-      <div className="absolute top-0 right-0 -translate-y-1/3 translate-x-1/3 w-[700px] h-[700px] bg-[var(--accent)] rounded-full blur-[150px] opacity-15 pointer-events-none"></div>
 
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-16">

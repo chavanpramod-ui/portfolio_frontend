@@ -130,22 +130,30 @@ function App() {
   const toggleTheme = () => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
 
   return (
-    <div className="min-h-screen bg-[var(--page-bg)] text-[var(--text)] transition-colors duration-500">
-      <Header theme={theme} toggleTheme={toggleTheme} activeSection={activeSection} setActiveSection={setActiveSection} />
+    <div className="min-h-screen bg-[var(--page-bg)] text-[var(--text)] transition-colors duration-500 relative">
+      {/* Global Decorative Background Blobs */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div className="absolute top-[-10%] right-[-5%] w-[70vw] h-[70vw] max-w-[800px] max-h-[800px] bg-[var(--accent)] rounded-full blur-[150px] opacity-15"></div>
+        <div className="absolute bottom-[-10%] left-[-10%] w-[60vw] h-[60vw] max-w-[600px] max-h-[600px] bg-[var(--gradient-start)] rounded-full blur-[150px] opacity-10"></div>
+      </div>
 
-      <main className="px-6 py-28">
-        <div className="mx-auto max-w-5xl space-y-16">
-          <Hero />
-          <Skills />
-          <Experience />
-          <Awards />
-          <Education />
-          <ProjectGallery />
-          <Contact />
-        </div>
-      </main>
+      <div className="relative z-10 flex flex-col min-h-screen">
+        <Header theme={theme} toggleTheme={toggleTheme} activeSection={activeSection} setActiveSection={setActiveSection} />
 
-      <Footer />
+        <main className="flex-grow px-6 py-28">
+          <div className="mx-auto max-w-5xl space-y-16">
+            <Hero />
+            <Skills />
+            <Experience />
+            <Awards />
+            <Education />
+            <ProjectGallery />
+            <Contact />
+          </div>
+        </main>
+
+        <Footer />
+      </div>
 
       {showScrollTop && (
         <button
