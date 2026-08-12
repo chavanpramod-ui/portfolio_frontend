@@ -21,8 +21,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="relative py-24 overflow-hidden">
-      {/* Decorative Background Blob */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[var(--accent)] rounded-full blur-[150px] opacity-10 pointer-events-none"></div>
+
 
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="mb-16 flex flex-col items-center text-center fade-in-up">

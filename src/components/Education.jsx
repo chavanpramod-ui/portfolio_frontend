@@ -22,8 +22,7 @@ const Education = () => {
 
   return (
     <section id="education" className="relative py-24 w-full overflow-hidden">
-      {/* Subtle Premium Background */}
-      <div className="absolute top-1/3 left-0 -translate-x-1/4 w-[600px] h-[600px] bg-[var(--accent)] rounded-full blur-[160px] opacity-[0.08] pointer-events-none"></div>
+
 
       <div className="relative mx-auto max-w-4xl px-6">
         <div className="mb-16 flex flex-col items-center text-center fade-in-up">

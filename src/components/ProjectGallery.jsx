@@ -39,8 +39,7 @@ const ProjectGallery = () => {
 
   return (
     <section id="projects" className="relative py-24 overflow-hidden">
-      {/* Decorative Background Blob */}
-      <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/3 w-[700px] h-[700px] bg-[var(--accent-2)] rounded-full blur-[150px] opacity-10 pointer-events-none"></div>
+
 
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="mb-16 flex flex-col items-center text-center fade-in-up">

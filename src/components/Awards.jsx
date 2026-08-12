@@ -20,8 +20,7 @@ const Awards = () => {
 
   return (
     <section id="awards" className="relative py-24 overflow-hidden">
-      {/* Decorative Background Blob */}
-      <div className="absolute bottom-0 left-0 -translate-x-1/3 translate-y-1/3 w-[500px] h-[500px] bg-[var(--accent)] rounded-full blur-[150px] opacity-10 pointer-events-none"></div>
+
 
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="mb-16 flex flex-col items-center text-center fade-in-up">

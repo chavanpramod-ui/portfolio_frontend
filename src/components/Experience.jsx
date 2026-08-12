@@ -17,8 +17,7 @@ const Experience = () => {
 
   return (
     <section id="experience" className="relative py-24 w-full overflow-hidden">
-      {/* Subtle Premium Background */}
-      <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[600px] h-[600px] bg-[var(--accent-2)] rounded-full blur-[160px] opacity-[0.08] pointer-events-none"></div>
+
 
       <div className="relative mx-auto max-w-4xl px-6">
         <div className="mb-16 flex flex-col items-center text-center fade-in-up">
