@@ -56,21 +56,21 @@ const ProjectGallery = () => {
 
         {/* Feature Highlights Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 fade-in-up">
-          <div className="group rounded-[2rem] border border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-xl p-8 shadow-lg transition-transform hover:-translate-y-1">
+          <div className="group rounded-[2rem] border border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-xl p-8 shadow-lg premium-hover">
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--surface-2)] text-[var(--accent)] mb-6 shadow-inner">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" /></svg>
             </div>
             <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)] mb-2 font-bold">Focus</p>
             <p className="text-2xl font-bold text-[var(--text)]">MERN Stack</p>
           </div>
-          <div className="group rounded-[2rem] border border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-xl p-8 shadow-lg transition-transform hover:-translate-y-1" style={{ animationDelay: '100ms' }}>
+          <div className="group rounded-[2rem] border border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-xl p-8 shadow-lg premium-hover" style={{ animationDelay: '100ms' }}>
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--surface-2)] text-[var(--accent)] mb-6 shadow-inner">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
             </div>
             <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)] mb-2 font-bold">Feature</p>
             <p className="text-2xl font-bold text-[var(--text)]">Real-Time Sync</p>
           </div>
-          <div className="group rounded-[2rem] border border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-xl p-8 shadow-lg transition-transform hover:-translate-y-1" style={{ animationDelay: '200ms' }}>
+          <div className="group rounded-[2rem] border border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-xl p-8 shadow-lg premium-hover" style={{ animationDelay: '200ms' }}>
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--surface-2)] text-[var(--accent)] mb-6 shadow-inner">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" /></svg>
             </div>
@@ -84,7 +84,7 @@ const ProjectGallery = () => {
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="group relative flex flex-col rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-xl p-8 shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_-10px_var(--hover-glow)] hover:border-[var(--accent)]/50 pop-in"
+              className="group relative flex flex-col rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-xl p-8 shadow-2xl premium-hover pop-in"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card Inner Gradient Hover */}

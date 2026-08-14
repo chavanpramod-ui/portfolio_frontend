@@ -149,14 +149,15 @@ textarea:focus-visible {
 }
 
 .premium-hover {
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  will-change: transform, box-shadow, border-color;
 }
 
 .premium-hover:hover {
-  transform: translateY(-10px) scale(1.02) !important;
-  box-shadow: 0 30px 60px -15px var(--nav-accent), 0 0 30px var(--hover-glow) !important;
+  transform: translateY(-12px) scale(1.03) !important;
+  box-shadow: 0 40px 80px -20px var(--nav-accent), 0 0 40px var(--hover-glow), inset 0 0 20px rgba(255,255,255,0.05) !important;
   border-color: var(--accent) !important;
-  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.03), transparent) !important;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent) !important;
 }
 
 .skill-pill {

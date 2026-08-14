@@ -65,7 +65,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           
           {/* Left Side: Contact Information */}
-          <div className="group relative flex flex-col rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-xl p-8 md:p-12 shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_-10px_var(--hover-glow)] hover:border-[var(--accent)]/50 fade-in-up">
+          <div className="group relative flex flex-col rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-xl p-8 md:p-12 shadow-2xl premium-hover fade-in-up">
             <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-[var(--nav-accent)] to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-10 pointer-events-none"></div>
             
             <div className="relative z-10">
@@ -98,7 +98,7 @@ const Contact = () => {
           </div>
 
           {/* Right Side: The Form */}
-          <form onSubmit={handleSubmit} className="group relative rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-xl p-8 md:p-12 shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_-10px_var(--hover-glow)] hover:border-[var(--accent)]/50 fade-in-up" style={{ animationDelay: '150ms' }}>
+          <form onSubmit={handleSubmit} className="group relative rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-xl p-8 md:p-12 shadow-2xl premium-hover fade-in-up" style={{ animationDelay: '150ms' }}>
             <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-[var(--nav-accent)] to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-10 pointer-events-none"></div>
 
             <div className="relative z-10 flex flex-col gap-6">

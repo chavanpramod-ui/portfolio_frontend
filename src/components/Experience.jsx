@@ -37,7 +37,7 @@ const Experience = () => {
           {roles.map((role, index) => (
             <div 
               key={index} 
-              className="group relative flex flex-col rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-xl p-8 shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_-10px_var(--hover-glow)] hover:border-[var(--accent)]/50 pop-in"
+              className="group relative flex flex-col rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-xl p-8 shadow-2xl premium-hover pop-in"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card Inner Gradient Hover */}

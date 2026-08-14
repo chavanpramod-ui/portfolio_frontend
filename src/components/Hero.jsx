@@ -31,7 +31,7 @@ const Hero = () => {
               ].map((item, idx) => (
                 <div 
                   key={idx} 
-                  className="group relative flex flex-col rounded-[2rem] border border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-xl p-6 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_var(--hover-glow)] hover:border-[var(--accent)]/50 pop-in"
+                  className="group relative flex flex-col rounded-[2rem] border border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-xl p-6 shadow-xl premium-hover pop-in"
                   style={{ animationDelay: `${idx * 100}ms` }}
                 >
                   <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-[var(--nav-accent)] to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-10 pointer-events-none"></div>
