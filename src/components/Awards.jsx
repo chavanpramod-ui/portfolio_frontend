@@ -25,7 +25,7 @@ const Awards = () => {
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="mb-16 flex flex-col items-center text-center fade-in-up">
           <span className="inline-block px-4 py-1.5 mb-6 rounded-full border border-[var(--border)] bg-[var(--surface-2)]/80 backdrop-blur-md text-xs font-bold uppercase tracking-[0.3em] text-[var(--accent)] shadow-sm">
-            Awards & Certifications
+            Awards And Certifications
           </span>
           <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-[var(--text)]">
             Certifications & <span className="gradient-text">Achievements</span>
