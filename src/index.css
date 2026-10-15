@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  /* Premium Dark theme - Black & Gold */
+  
   color-scheme: dark;
-  --page-bg: #0a0a0a; /* deep black */
-  --surface: #141414; /* card surface */
-  --surface-2: #1e1e1e; /* slightly lighter surface for nested cards */
-  --text: #f5f5f5; /* soft off-white text */
-  --muted: #a3a3a3; /* muted descriptive text */
-  --border: rgba(229, 203, 124, 0.15); /* subtle gold border */
-  --accent: #e5cb7c; /* light gold primary accent */
-  --accent-2: #cba135; /* dark gold secondary accent */
+  --page-bg: #0a0a0a; 
+  --surface: #141414; 
+  --surface-2: #1e1e1e; 
+  --text: #f5f5f5; 
+  --muted: #a3a3a3; 
+  --border: rgba(229, 203, 124, 0.15); 
+  --accent: #e5cb7c; 
+  --accent-2: #cba135; 
   --gradient-start: #e5cb7c;
   --gradient-end: #cba135;
   --nav-bg: linear-gradient(180deg, rgba(10,10,10,0.8), rgba(10,10,10,0.5));
@@ -19,16 +19,16 @@
 }
 
 .light {
-  /* Premium Light theme - Monochromatic Pink */
+ 
   color-scheme: light;
-  --page-bg: #fffcfd; /* very soft warm pinkish white */
-  --surface: #ffffff; /* white cards */
-  --surface-2: #fff5f7; /* very subtle warm pink for nested cards */
-  --text: #2d2426; /* rich charcoal text */
-  --muted: #8a7a7d; /* slightly softer muted grey/brown for labels */
-  --border: rgba(255, 105, 180, 0.4); /* soft pink border */
-  --accent: #ff69b4; /* hot pink primary accent */
-  --accent-2: #ffb6c1; /* light pink secondary accent */
+  --page-bg: #fffcfd; 
+  --surface: #ffffff; 
+  --surface-2: #fff5f7; 
+  --text: #2d2426; 
+  --muted: #8a7a7d; 
+  --border: rgba(255, 105, 180, 0.4); 
+  --accent: #ff69b4; 
+  --accent-2: #ffb6c1; 
   --gradient-start: #ffb6c1;
   --gradient-end: #ff69b4; 
   --nav-bg: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));
