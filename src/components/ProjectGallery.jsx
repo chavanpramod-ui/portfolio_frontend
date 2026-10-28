@@ -20,12 +20,12 @@ const ProjectGallery = () => {
       live: "https://money-manager-frontend-mu.vercel.app/"
     },
     {
-      title: "Student Chat-Bot System",
-      type: "Academic Project",
-      description: "An automated assistant designed to handle student queries, improving response times and making university resources more accessible.",
+      title: "VogueGen – AI-Powered E-Commerce Platform",
+      type: "MERN Stack Project",
+      description: "Built a full-stack e-commerce platform using React, Node.js, Express.js, and MongoDB, featuring product listings with keywordsearch, category filtering, sorting, and a shopping cart.",
       tech: ["JavaScript", "React", "Node.js", "API Integration"],
-      github: "#",
-      live: "#"
+      github: "https://github.com/chavanpramod-ui/VogueGen-Frontend",
+      live: "https://vogue-gen-frontend.vercel.app/"
     },
     {
       title: "Hyperlocal Delivery Platform",
